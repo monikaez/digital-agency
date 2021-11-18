@@ -1,0 +1,92 @@
+@import "var.less";
+
+.header {
+    background-color: @color-dark-blue;
+    padding: 16px 0;
+
+
+    @media only screen and (max-width: @tablet) {
+
+   
+    &.open-menu {
+        .container {
+            flex-wrap: wrap;
+            
+        }
+
+        .header-nav {
+            flex-basis: 100%;
+            display: block;
+            cursor: pointer;
+            
+            a {
+            display: block;
+            padding: 10px;  
+                 
+            }
+        }
+    }
+
+ }        
+    @media only screen and (min-width: @desktop) {
+    background-color: transparent;
+    position: absolute;
+    top: 20px ;
+    width: 100%;
+    z-index: 1;
+
+    }
+
+    .container {
+     display: flex;
+     align-items: center;
+
+    
+    }
+
+
+
+    &-nav {
+        display: none;
+
+        @media  only screen  and (min-width: @desktop) {
+        display: block;
+        margin-left: auto;
+        z-index: 10;
+    }
+            
+               
+        a {
+            color: @color-white;
+            padding: 27px 25px;
+            font-size: 15px;
+        }
+
+    }
+        &-logo {
+            color: @color-white;
+            font-size: 22px;
+            font-weight: bold;
+            z-index: 10;
+        }
+        
+   
+    &-mobile-menu {
+              
+        margin-left: auto;
+        text-transform:uppercase;
+        letter-spacing: 1px;
+
+        @media  only screen  and (min-width: @desktop){
+            display: none;
+        }
+       
+        .fa-bars ,span {
+            color: @color-white;
+            
+        }
+         
+        
+    }
+
+}

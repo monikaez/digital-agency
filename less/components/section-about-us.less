@@ -1,0 +1,36 @@
+@import "var.less";
+
+.section-about-us {
+    &-text {
+        p {
+        color: @color-light-black;    
+        }
+        @media  only screen  and (min-width: @tablet){ 
+            padding-left: 20px;
+
+        }  
+    }
+    .btn-green {
+        padding: 16px 24px;
+        display: inline-block;
+
+    }
+    &-img {
+        margin-bottom: 10px;
+
+        img {
+            @media  only screen  and (min-width: @tablet){ 
+                border-radius: 50% 50% 0 50%;
+
+            }  
+        }
+    }
+    &-text ,
+    &-img {
+        @media  only screen  and (min-width: @desktop){ 
+            flex-basis: calc((100% / 2) - 20px);
+            margin-left: 10px;
+            margin-right: 10px;
+        }  
+    }
+}

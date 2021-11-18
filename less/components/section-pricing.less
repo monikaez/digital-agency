@@ -1,0 +1,133 @@
+@import "var.less";
+@import "mixin.less";
+
+.section-pricing {
+
+    .section-title ,
+    .section-sub-title {
+        display: block;
+      text-align: center;
+    }
+
+ .pricing-wrapper {
+    max-width: 520px;
+    margin: 50px auto 0 auto;
+
+  .flex-wrapper();
+}
+
+    .pricing-item {
+        text-align: center;
+        background-color: #f9faff;
+        padding: 40px 0;
+        margin: 30px 0;
+        transition: all .3s ease;
+
+        @media  only screen  and (min-width: @tablet) { 
+        
+            flex-basis: calc((100% / 2) - 20px);
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        @media  only screen  and (min-width: @tablet) { 
+        
+            flex-basis: calc((100% / 4) - 20px);
+        }
+        &:hover {
+            background-color: #fff;
+            box-shadow: 0 24px 48px -11px rgb(0 0 0 / 11%);
+
+            .btn-green {
+                background-color: @color-yellow;
+            }
+        }
+
+        &-price {
+            display: block;
+            color: @color-yellow;
+            margin-bottom: 10px;
+        }
+
+        sup,sub {
+    color: @color-silver;
+        }
+
+        sup {
+            font-size: 20px;
+            position: relative;
+            top: -6px;
+            left: -10px;
+        }
+        sub {
+            font-size: 12px;
+        }
+
+        &-value {
+            span {
+                font-size: 40px;
+                color: #000;
+                font-weight: 500;
+            }
+        }
+
+
+        &-text {
+            list-style-type: none;
+            padding: 0;
+            
+            i {
+                margin-right: 8px;
+            }
+
+            li {
+                padding: 10px 30px;
+                color: @color-silver;
+            }
+    }
+
+    &:nth-of-type(1) {
+    .pricing-item-text {
+        li:nth-of-type(1),
+        li:nth-of-type(2) {
+            color:#000;
+        }
+    }
+}
+
+
+
+    &:nth-of-type(3) {
+    .pricing-item-text {
+        li:nth-of-type(1),
+        li:nth-of-type(2),
+        li:nth-of-type(3),
+        li:nth-of-type(4), 
+        li:nth-of-type(5) {
+            color:#000;
+        }
+    }
+}
+
+
+    &:nth-of-type(4) {
+    .pricing-item-text li {
+        color: #000;
+    }
+}
+
+    .text-bold {
+        color: #000;
+    }
+
+    &-buy {
+        width: 60%;
+        padding: 16px 8px;
+        display: block;
+        margin: 0 auto;
+        font-weight: 600;
+        transition: all .3s ease;
+        
+    }
+}
+}

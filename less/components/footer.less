@@ -1,0 +1,208 @@
+@import "var.less";
+
+.footer {
+    background-color: #f4eefe;
+
+    &-title {
+        font-size: 18px;
+        color: @color-title;
+        font-weight: 600;
+        margin-bottom: 40px;
+
+    }
+
+    &-item-text {
+    margin-bottom: 24px;
+            .footer-link {
+            color: #5579fa;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: inline-block;
+
+        }
+    .footer-desc {
+        color: @color-light-black;
+
+    }
+
+    .social-icons {
+         a {
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+        display: inline-block;
+        background-color: @color-green;
+        text-align: center;
+        line-height: 30px;
+
+        i {
+            color: @color-white;
+            font-size: 17px;
+            
+        }
+    }
+}
+    }
+
+    &-item-posts {
+        margin-left: 20px;
+        margin-right: 40px;
+       
+        .post-title {
+            font-size: 18px;
+            color: @color-title;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        .post-item {
+
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 24px;
+    
+            img { 
+                width: 60px;
+                border-radius: 4px;
+            }
+
+            &-text {
+                padding-left: 20px;
+
+                .post-item-date {
+                    margin-bottom: 5px;
+
+                    span {
+                        color: @color-green;
+                        font-size: 12px;
+                        margin-right: 5px;
+                    }
+                }
+
+                h3 {
+                    color: @color-light-black;
+                    font-size: 16px;
+                    font-weight: normal;
+                    transition: all .3s ease;
+
+                    &:hover {
+                        color: @color-green;
+                    }
+                }
+            }
+            }
+            
+    }
+    
+
+    &-item-services {
+        margin-bottom: 25px;
+
+        .services-list {
+            list-style-type: none;
+            padding: 0;
+            @media only screen and (min-width: @tablet) {
+               display: flex;
+               flex-wrap: wrap;
+            }
+    
+
+            li { 
+                margin-bottom: 10px;
+                position: relative;
+                padding-left: 20px;
+                @media only screen and (min-width: @tablet) {
+                    flex-basis: 50%;
+                   
+                }
+                
+               
+                a  {
+                    color: @color-light-black;
+                    transition: all .3s ease;
+
+                    &:hover {
+                        color: @color-green;
+                    }
+
+                }
+                i {
+                    color: @color-purple;
+                    margin-right: 10px;
+                    position: absolute;
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    &-item-contact {
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            a {
+                color: @color-light-black;
+                position: relative;
+                padding-left: 40px;
+                margin-bottom: 20px;
+            
+
+                 i {
+                color: @color-green;
+                position: absolute;
+                left: 0;
+
+                }
+            }
+        }
+    }
+
+
+    .footer-wrapper {
+
+        @media only screen and (min-width: @tablet) {
+           display: flex;
+           flex-wrap: wrap;
+        }
+
+        @media only screen and (min-width: @desktop) {
+            flex-wrap: nowrap;
+        }
+    
+    &-item-text, 
+    &-item-posts,
+    &-item-services,
+    &-item-contact {
+        @media only screen and (min-width: @tablet) {
+            flex-basis: calc((100% / 2) - 20px);
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        @media only screen and (min-width: @desktop) {
+            flex-basis: calc((100% / 4) - 20px);
+        }
+    }
+
+    &-item-services {
+        @media only screen and (min-width: @desktop) {
+            flex-basis: 40%;
+        }
+    }
+
+}
+}
+.footer-copyright {
+   background-color: #e0d1fd;
+   color: @color-light-black;
+   text-align: center;
+   padding: 48px 12px;
+   margin: 0;
+
+   a {
+       color: @color-white;
+   }
+}
